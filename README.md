@@ -1,15 +1,18 @@
 ## TODO-API
+
 A simple RESTful API to manage a TODO list using Node.js, Express, and MongoDB.
 --------------
 ## Features. 
- 1- Get all tasks
- 2- create a new tasks
- 3- get a task by ID 
- 4- update the task 
- 5- dalete the task 
+
+ - Get all tasks
+ - create a new tasks
+ - get a task by ID 
+ - update the task 
+ - dalete the task 
 --------------
 ## Project Structure
 
+```
 TODO-API/
 |
 |__config/
@@ -29,9 +32,10 @@ TODO-API/
 |__index.js
 |
 |__package.json 
+```
 --------------
 
-Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
