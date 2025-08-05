@@ -7,7 +7,7 @@ exports.getTodos = async (req, res) => {
     const todos = await Todo.find();
     res.json(todos);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.json({ error: err.message });
   }
 };
 
@@ -19,7 +19,7 @@ exports.createTodo = async (req, res) => {
     const saved = await newTodo.save();
     res.status(201).json(saved);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.json({ error: err.message });
   }
 };
 
@@ -30,7 +30,7 @@ exports.getTodoById = async (req, res) => {
     if (!todo) return res.status(404).json({ message: 'Task not found' });
     res.json(todo);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.json({ error: err.message });
   }
 };
 
@@ -41,7 +41,7 @@ exports.updateTodo = async (req, res) => {
     if (!updated) return res.status(404).json({ message: 'Task not found' });
     res.json({ message: 'Updated successfully', todo: updated });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.json({ error: err.message });
   }
 };
 
@@ -52,6 +52,6 @@ exports.deleteTodo = async (req, res) => {
     if (!deleted) return res.status(404).json({ message: 'Task not found' });
     res.json({ message: 'Deleted successfully' });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.json({ error: err.message });
   }
 };
